@@ -1,0 +1,21 @@
+@startuml
+
+class User {
+  +String fullName
+  +String email
+  +String password
+  +Date createdAt
+}
+
+class Note {
+  +String title
+  +String content
+  +String[] tags
+  +Boolean isPinned
+  +String userId
+  +Date createdAt
+}
+
+User "1" -- "*" Note : owns >
+
+@enduml 
